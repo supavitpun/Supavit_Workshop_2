@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Booking | Diddy Hotel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header><a class="brand" href="index.html">Diddy Hotel</a>
+        <nav><a href="rooms.html">Rooms</a><a href="booking.html">Book</a><a href="register.html">Customer registration</a></nav>
+    </header>
+    <main class="container narrow">
+        <h1>Booking</h1>
+        
+        <form id="booking-form">
+            <label>Check-in date<input id="check-in" type="date" required></label>
+            <label>Check-out date<input id="check-out" type="date" required></label>
+            <label>Guest count<input id="guests" type="number" min="1" max="4" value="1" required></label>
+            <label>Room type
+                <select id="room-type" required>
+                    <option value="">Choose room type</option>
+                    <option value="standard">Standard room</option>
+                    <option value="deluxe">Deluxe room</option>
+                    <option value="family">Family room</option>
+                </select>
+            </label>
+            <label>Room number<select id="room-number" required disabled><option value="">Choose room type first</option></select></label>
+                        <fieldset>
+                <legend>Payment method</legend>
+                <label class="inline" style="display: inline-flex; align-items: center; gap: 8px; margin-right: 15px; cursor: pointer;">
+                    <input type="radio" name="payment" value="Card" checked style="margin: 0; width: auto;"> Card
+                </label>
+                <label class="inline" style="display: inline-flex; align-items: center; gap: 8px; cursor: pointer;">
+                    <input type="radio" name="payment" value="Bank transfer" style="margin: 0; width: auto;"> Bank transfer
+                </label>
+            </fieldset>
+
+            <label>Special request <span style="font-size: 0.85em; color: #666; font-weight: normal;">(Optional)</span>
+                <textarea id="request" placeholder="e.g., quiet room, extra pillows, early check-in"></textarea>
+            </label>
+            <!-- Why does this reduce user effort or confusion? Explicitly labeling the field as optional and providing placeholders removes the cognitive load of guessing what to type or wondering if the field is mandatory. -->
+            <button type="submit">Review booking</button>
+            <p id="status" class="status" role="status">Choose dates, room type, and room number.</p>
+        </form>
+
+        <section id="preview" class="preview" hidden></section>
+
+        <script src="js/rooms.js"></script>
+        <script src="js/booking.js"></script>
+    </main>
+
+    <!-- Usability test task: A guest wants to book a Deluxe Room for 2 guests, paying with a Bank Transfer, and requests a room on a high floor. -->
+    <!-- Expected evidence: I will watch for whether they look for a room number before selecting a room type, and whether they notice the "Optional" label on the special request field. -->
+</body>
+
+</html>

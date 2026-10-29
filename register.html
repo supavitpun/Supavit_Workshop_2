@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Customer registration | StayEasy</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header><a class="brand" href="index.html">StayEasy Hotel</a>
+        <nav><a href="rooms.html">Rooms</a><a href="booking.html">Book</a><a href="register.html">Customer
+                registration</a></nav>
+    </header>
+    <main class="container narrow">
+        <h1>Customer registration: improve this form</h1>
+        <p>All fields below are text fields. Replace only the controls that should use a more suitable UI.</p>
+        <form><label>Name<input type="text"></label><label>Email<input type="text"></label><label>Phone<input
+                    type="text"></label><label>Address line 1<input type="text"></label><label>Address line 2<input
+                    type="text"></label><label>ZIP code<input type="text"></label><label>Province<input id="province"
+                    type="text" placeholder="Type a province"></label><button type="button">Submit</button>
+            <p class="status">No data is stored in this prototype.</p>
+        <form id="registration-form">
+  <label>Name<input type="text" required></label>
+  <label>Email<input type="email" required></label>
+  <label>Phone<input type="tel"></label>
+  <label>Address line 1<input type="text"></label>
+  <label>Address line 2<input type="text"></label>
+  <label>ZIP code<input type="text" inputmode="numeric" maxlength="5"></label>
+  <label>Province<select id="province" required><option value="">Choose province</option></select></label>
+  <button type="submit">Review customer details</button>
+  <p id="status" class="status" role="status">No data is stored in this prototype.</p>
+</form>
+
+<script src="js/provinces.js"></script>
+<script src="js/register.js"></script>
+
+    </main>
+</body>
+
+</html>
